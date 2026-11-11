@@ -1,0 +1,909 @@
+/* =====================================
+   GLOBAL STYLES
+===================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.consumer-dashboard {
+  min-height: 100vh;
+  padding: 45px 20px;
+
+  background: linear-gradient(
+    115deg,
+    #faf5ff 0%,
+    #f5f3ff 45%,
+    #eef2ff 100%
+  );
+
+  font-family: Arial, Helvetica, sans-serif;
+  color: #172033;
+}
+
+
+/* =====================================
+   NAVIGATION BAR
+===================================== */
+
+.consumer-navbar {
+  max-width: 1128px;
+  min-height: 78px;
+
+  margin: 0 auto 34px;
+  padding: 15px 24px;
+
+  background: #ffffff;
+  border: 1px solid #f0edf4;
+  border-radius: 17px;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.03);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.consumer-brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.consumer-brand-icon {
+  width: 45px;
+  height: 45px;
+
+  background: #7135df;
+  color: white;
+
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.consumer-brand h1 {
+  font-size: 29px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  color: #121a2c;
+}
+
+.consumer-brand h1 span {
+  color: #7135df;
+}
+
+.consumer-navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.consumer-info {
+  text-align: right;
+}
+
+.consumer-info h4 {
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+.consumer-info p {
+  color: #8992a1;
+  font-size: 12px;
+}
+
+.consumer-avatar {
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  background: #f0f2f8;
+  border: 1px solid #e6e8ef;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 700;
+  color: #687386;
+}
+
+.consumer-divider {
+  height: 43px;
+  width: 1px;
+  background: #e9e9ed;
+}
+
+.consumer-logout {
+  border: none;
+  background: transparent;
+
+  color: #475263;
+  font-size: 14px;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  padding: 10px;
+}
+
+.consumer-logout:hover {
+  color: #7135df;
+}
+
+.consumer-logout span {
+  font-size: 20px;
+}
+
+
+/* =====================================
+   MAIN CONTENT
+===================================== */
+
+.consumer-main {
+  max-width: 1128px;
+  margin: 0 auto;
+}
+
+
+/* =====================================
+   PAGE HEADING
+===================================== */
+
+.providers-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+
+  padding-bottom: 17px;
+  margin-bottom: 32px;
+
+  border-bottom: 1px solid #e4e7ed;
+}
+
+.providers-heading h2 {
+  font-size: 30px;
+  font-weight: 750;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+}
+
+.providers-heading p {
+  font-size: 18px;
+  color: #8993a2;
+}
+
+.provider-count {
+  background: white;
+  border: 1px solid #e7e9ee;
+  border-radius: 30px;
+
+  padding: 7px 17px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  white-space: nowrap;
+  color: #333b49;
+}
+
+
+/* =====================================
+   PROVIDER GRID
+===================================== */
+
+.provider-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+
+/* =====================================
+   PROVIDER CARD
+===================================== */
+
+.consumer-provider-card {
+  background: white;
+
+  padding: 24px;
+
+  border-radius: 17px;
+  border: 1px solid #f0edf4;
+
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.09);
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.consumer-provider-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =====================================
+   PROVIDER HEADER
+===================================== */
+
+.provider-card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  margin-bottom: 25px;
+}
+
+.provider-avatar {
+  width: 56px;
+  height: 56px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+  background: #f0f3f8;
+  border: 3px solid #f7f8fb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  color: #667085;
+}
+
+.provider-card-header h3 {
+  font-size: 19px;
+  font-weight: 700;
+  color: #172033;
+}
+
+
+/* =====================================
+   PROVIDER CONTACT DETAILS
+===================================== */
+
+.provider-contact {
+  padding: 16px;
+
+  background: #f8fafc;
+  border: 1px solid #f0f2f6;
+  border-radius: 13px;
+
+  margin-bottom: 25px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 12px;
+
+  font-size: 14px;
+  color: #5c6677;
+
+  min-width: 0;
+}
+
+.contact-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact-item span:last-child {
+  overflow-wrap: anywhere;
+}
+
+.contact-icon {
+  width: 18px;
+  flex-shrink: 0;
+
+  color: #9a69d5;
+  font-size: 17px;
+  text-align: center;
+}
+
+
+/* =====================================
+   SUPPORTED PLATFORMS
+===================================== */
+
+.supported-platforms {
+  margin-bottom: 24px;
+}
+
+.supported-platforms label {
+  display: block;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+  color: #9aa4b3;
+  margin-bottom: 12px;
+}
+
+.consumer-platform-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.consumer-platform-tags span {
+  padding: 5px 12px;
+
+  background: white;
+  border: 1px solid #e5e8ef;
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 600;
+  color: #596475;
+}
+
+
+/* =====================================
+   CREATE REQUEST BUTTON
+===================================== */
+
+.create-request-button {
+  width: 100%;
+  min-height: 57px;
+
+  margin-top: auto;
+
+  border: none;
+  border-radius: 9px;
+
+  background: #111a2e;
+  color: white;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  transition: 0.2s ease;
+}
+
+.create-request-button:hover {
+  background: #7135df;
+  transform: translateY(-1px);
+}
+
+.create-request-button span {
+  font-size: 24px;
+  line-height: 1;
+}
+
+
+/* =====================================
+   MY REQUESTS
+===================================== */
+
+.my-requests-section {
+  margin-top: 45px;
+}
+
+.my-requests-section h2 {
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.my-requests-section > p {
+  color: #8993a2;
+  margin-bottom: 18px;
+}
+
+.my-requests-list {
+  background: white;
+
+  border-radius: 12px;
+  overflow: hidden;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.my-request-item {
+  padding: 20px;
+
+  border-bottom: 1px solid #e9ebef;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.my-request-item:last-child {
+  border-bottom: none;
+}
+
+.my-request-details h4 {
+  margin-bottom: 8px;
+}
+
+.my-request-details p {
+  font-size: 13px;
+  color: #8993a2;
+  margin-bottom: 5px;
+}
+
+.consumer-pending {
+  background: #fff1cf;
+  color: #a8752c;
+
+  padding: 5px 12px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================
+   CREATE REQUEST POPUP OVERLAY
+===================================== */
+
+.request-overlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  background: rgba(22, 30, 49, 0.82);
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+
+/* =====================================
+   REQUEST MODAL
+===================================== */
+
+.request-modal {
+  width: 100%;
+  max-width: 512px;
+
+  background: #ffffff;
+
+  border-radius: 16px;
+  overflow: hidden;
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+
+  animation: requestPopup 0.25s ease;
+}
+
+
+/* Popup Animation */
+
+@keyframes requestPopup {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =====================================
+   REQUEST MODAL HEADER
+===================================== */
+
+.request-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  padding: 31px 32px 20px;
+}
+
+.request-modal-header h2 {
+  font-size: 29px;
+  font-weight: 750;
+
+  color: #111827;
+
+  margin-bottom: 10px;
+}
+
+.request-modal-header p {
+  font-size: 15px;
+  line-height: 1.5;
+
+  color: #7c8797;
+
+  max-width: 420px;
+}
+
+.request-modal-header strong {
+  color: #252d3d;
+}
+
+
+/* Close Button */
+
+.request-close {
+  border: none;
+  background: transparent;
+
+  color: #8993a2;
+  font-size: 27px;
+
+  cursor: pointer;
+  line-height: 1;
+
+  padding: 0 0 5px 10px;
+}
+
+.request-close:hover {
+  color: #7135df;
+}
+
+
+/* =====================================
+   REQUEST MODAL CONTENT
+===================================== */
+
+.request-modal-content {
+  padding: 0 32px 35px;
+}
+
+.request-section {
+  margin-top: 4px;
+  margin-bottom: 25px;
+}
+
+.request-section-label {
+  display: block;
+
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+  color: #505b6b;
+
+  margin-bottom: 16px;
+}
+
+.request-section-label span {
+  color: #e34b55;
+}
+
+
+/* =====================================
+   PLATFORM SELECTION BOXES
+===================================== */
+
+.request-platform-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 15px;
+}
+
+.request-platform-option {
+  min-height: 56px;
+
+  padding: 12px 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: #ffffff;
+
+  border: 2px solid #e7eaf0;
+  border-radius: 12px;
+
+  color: #586475;
+
+  font-size: 16px;
+  font-weight: 650;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.request-platform-option:hover {
+  border-color: #a57ae9;
+}
+
+.request-platform-option.selected {
+  border-color: #7935e9;
+
+  background: #f7f1ff;
+  color: #7135df;
+}
+
+.platform-check {
+  font-size: 17px;
+  font-weight: bold;
+  color: #7135df;
+}
+
+
+/* =====================================
+   DATE AND TIME SELECTION
+===================================== */
+
+.request-date-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 15px;
+}
+
+.request-date-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+
+  min-width: 0;
+}
+
+.request-date-field label {
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #7b8797;
+}
+
+.request-date-field input {
+  width: 100%;
+  min-width: 0;
+  height: 49px;
+
+  padding: 0 10px;
+
+  border: 1px solid #dce1e8;
+  border-radius: 9px;
+
+  color: #414b5b;
+  background: #ffffff;
+
+  font-size: 13px;
+
+  outline: none;
+}
+
+.request-date-field input:focus {
+  border-color: #7935e9;
+
+  box-shadow: 0 0 0 3px rgba(121, 53, 233, 0.1);
+}
+
+
+/* =====================================
+   REQUEST MODAL FOOTER
+===================================== */
+
+.request-modal-footer {
+  padding: 19px 32px;
+
+  display: flex;
+  justify-content: flex-end;
+
+  border-top: 1px solid #edf0f4;
+
+  background: #ffffff;
+}
+
+.request-submit-button {
+  min-width: 202px;
+  min-height: 56px;
+
+  padding: 12px 22px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #7935e9;
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.request-submit-button:hover:not(:disabled) {
+  background: #6225cc;
+}
+
+.request-submit-button:disabled {
+  background: #cbb5f6;
+  color: #ffffff;
+
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+
+/* =====================================
+   TABLET RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 900px) {
+
+  .provider-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =====================================
+   MOBILE RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 600px) {
+
+  .consumer-dashboard {
+    padding: 18px 12px;
+  }
+
+  .consumer-navbar {
+    padding: 15px;
+
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .consumer-brand h1 {
+    font-size: 22px;
+  }
+
+  .consumer-brand-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .consumer-navbar-right {
+    width: 100%;
+
+    justify-content: space-between;
+    gap: 9px;
+  }
+
+  .consumer-info p {
+    font-size: 10px;
+  }
+
+  .consumer-avatar {
+    width: 38px;
+    height: 38px;
+  }
+
+  .providers-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .providers-heading h2 {
+    font-size: 24px;
+  }
+
+  .providers-heading p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .provider-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .consumer-provider-card {
+    padding: 20px;
+  }
+
+  .my-request-item {
+    padding: 16px;
+  }
+
+}
+
+
+/* =====================================
+   POPUP MOBILE RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 550px) {
+
+  .request-overlay {
+    padding: 12px;
+  }
+
+  .request-modal {
+    max-width: 100%;
+    border-radius: 13px;
+
+    max-height: 95vh;
+    overflow-y: auto;
+  }
+
+  .request-modal-header {
+    padding: 24px 20px 18px;
+  }
+
+  .request-modal-header h2 {
+    font-size: 24px;
+  }
+
+  .request-modal-header p {
+    font-size: 13px;
+  }
+
+  .request-modal-content {
+    padding: 0 20px 25px;
+  }
+
+  .request-platform-grid {
+    gap: 10px;
+  }
+
+  .request-platform-option {
+    font-size: 13px;
+    padding: 10px;
+    min-height: 52px;
+  }
+
+  .request-date-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .request-modal-footer {
+    padding: 16px 20px;
+  }
+
+  .request-submit-button {
+    width: 100%;
+  }
+
+}
