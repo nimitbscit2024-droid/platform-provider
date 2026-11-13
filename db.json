@@ -1,0 +1,37 @@
+{
+"users": [
+{
+"id": 1,
+"name": "David Villa",
+"email": "davidvilla@gmail.com",
+"password": "password123",
+"userType": "consumer",
+"platforms": []
+},
+{
+"id": 2,
+"name": "John Smith",
+"email": "john@provider.com",
+"phone": "+1 (555) 123-4567",
+"address": "123 Provider Lane, NY",
+"password": "password123",
+"userType": "provider",
+"platforms": ["Amazon Prime", "Netflix", "Disney Plus"]
+}
+],
+"requests": [
+{
+"id": 1,
+"providerId": 2,
+"providerName": "John Smith",
+"consumerId": 101,
+"consumerName": "Alexander Richardson",
+"consumerEmail": "alexander.richardson@example.com",
+"platform": "Netflix",
+"fromDate": "2026-07-02T15:00",
+"toDate": "2026-07-02T19:00",
+"requestedDate": "6/20/2026",
+"status": "Pending"
+}
+]
+}

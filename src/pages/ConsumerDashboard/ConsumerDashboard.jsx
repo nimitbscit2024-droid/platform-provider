@@ -25,9 +25,9 @@ function ConsumerDashboard() {
     },
     {
       id: 2,
-      name: "Sarah Johnson",
+      name: "Orangutan Johny  ",
       initials: "SJ",
-      email: "sarah@provider.com",
+      email: "Orangutan@provider.com",
       phone: "+1 (555) 987-6543",
       address: "456 Main Street, NY",
       platforms: ["Disney Plus", "Netflix"],
